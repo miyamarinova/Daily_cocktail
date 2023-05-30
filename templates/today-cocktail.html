@@ -1,0 +1,63 @@
+{% include "header.html" %}
+<head>
+    <meta charset="UTF-8">
+    <title>Cocktail for the Day</title>
+    <!-- Custom styles for this template -->
+  <link href="{{ url_for('static', filename='css/styles.css')}}" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+<div class="row">
+  <div class="col-md-6" style="margin-top: 30px; ">
+    <h1 style=" font-family: 'Pangolin', cursive;">{{ cocktail['drinks'][0]['strDrink'] }}</h1>
+<ul>
+      {% if cocktail['drinks'][0]['strIngredient1'] %}
+      <li><h3 style=" font-family: 'Pangolin', cursive;">{{ cocktail['drinks'][0]['strIngredient1'] }} - {{ cocktail['drinks'][0]['strMeasure1'] }}</h3></li>
+      {% endif %}
+
+      {% if cocktail['drinks'][0]['strIngredient2'] %}
+      <li><h3 style=" font-family: 'Pangolin', cursive;">{{ cocktail['drinks'][0]['strIngredient2'] }} - {{ cocktail['drinks'][0]['strMeasure2'] }}</h3></li>
+      {% endif %}
+
+      {% if cocktail['drinks'][0]['strIngredient3'] %}
+      <li><h3 style=" font-family: 'Pangolin', cursive;">{{ cocktail['drinks'][0]['strIngredient3'] }} - {{ cocktail['drinks'][0]['strMeasure3'] }}</h3></li>
+      {% endif %}
+
+      {% if cocktail['drinks'][0]['strIngredient4'] %}
+      <li><h3 style=" font-family: 'Pangolin', cursive;">{{ cocktail['drinks'][0]['strIngredient4'] }} - {{ cocktail['drinks'][0]['strMeasure4'] }}</h3></li>
+    {% endif %}
+
+      {% if cocktail['drinks'][0]['strIngredient5'] %}
+      <li><h3 style=" font-family: 'Pangolin', cursive;">{{ cocktail['drinks'][0]['strIngredient5'] }} - {{ cocktail['drinks'][0]['strMeasure5'] }}</h3></li>
+    {% endif %}
+
+      {% if cocktail['drinks'][0]['strIngredient6'] %}
+      <li><h3 style=" font-family: 'Pangolin', cursive;">{{ cocktail['drinks'][0]['strIngredient6'] }} - {{ cocktail['drinks'][0]['strMeasure6'] }}</h3></li>
+
+    {% endif %}
+
+      {% if cocktail['drinks'][0]['strIngredient7'] %}
+      <li><h3 style=" font-family: 'Pangolin', cursive;">{{ cocktail['drinks'][0]['strIngredient7'] }} - {{ cocktail['drinks'][0]['strMeasure7'] }}</h3></li>
+    {% endif %}
+
+    {% if cocktail['drinks'][0]['strIngredient8'] %}
+      <li><h3 style=" font-family: 'Pangolin', cursive;">{{ cocktail['drinks'][0]['strIngredient8'] }} - {{ cocktail['drinks'][0]['strMeasure8'] }}</h3></li>
+    {% endif %}
+
+    {% if cocktail['drinks'][0]['strIngredient9']  %}
+      <li><h3 style="font-family: 'Pangolin', cursive;">{{ cocktail['drinks'][0]['strIngredient7'] }} - {{ cocktail['drinks'][0]['strMeasure9'] }}</h3></li>
+    {% endif %}
+</ul>
+      <h3 style="text-align: 'left'; width: 100%; font-family: 'Pangolin', cursive;">{{ cocktail['drinks'][0]['strInstructions'] }}</h3></div>
+  <div class="col-md-6" style="margin-top: 30px;">
+    <img style="border-radius: 80%; max-width: 100%; height: auto;" src="{{ cocktail['drinks'][0]['strDrinkThumb'] }}">
+    </div>
+</div>
+</div>
+</div>
+    <div class="col text-center ">
+        <a href={{url_for('home')}} class="btn btn-outline-dark btn-large; " style="position-absolute bottom-center; style="text-align: center; font-family: 'Pangolin', cursive;"">Another One</a>
+    </div>
+</body>
+
+</html>

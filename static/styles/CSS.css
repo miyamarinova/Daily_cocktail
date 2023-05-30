@@ -1,0 +1,16 @@
+.header-title{
+    background-color: '#FFB84C';
+    height: 200px;
+}
+
+.title-cocktail {
+    margin-top: 100px;
+}
+
+.home-img{
+    background-image: url('static/images/cocktail_home.jpg')
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 400px;
+}
